@@ -1,0 +1,97 @@
+header {
+    .nav {
+        padding: 16px 0;
+
+        &_wrapper {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            align-items: center;
+            gap: 56px;
+
+            .gamburger {
+                display: none;
+            }
+
+            .logo {
+                width: 65px;
+                height: 23px;
+            }
+
+            .form {
+                width: 372px;
+                height: 56px;
+                background-color: #F5F5F5;
+                border-radius: 8px;
+                padding: 16px;
+
+                .fa-magnifying-glass {
+                    color: #656565;
+                    cursor: pointer;
+                }
+
+                input {
+                    border: none;
+                    background-color: #F5F5F5;
+                    margin-left: 8px;
+                    outline: none;
+                    width: 90%;
+                }
+            }
+        }
+
+        &_list {
+            display: flex;
+            align-items: center;
+            gap: 52px;
+            width: 369px;
+
+            .nav_item {
+                opacity: 30%;
+                font-size: 16px;
+                font-weight: 500;
+                transition: 0.3s ease-in-out;
+
+                &:hover {
+                    opacity: 100%;
+                }
+            }
+        }
+
+        &_icons {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+
+            i {
+                font-size: 20px;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+@include mobile() {
+    header {
+        .nav {
+            padding: 24px 0;
+            &_wrapper {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                .gamburger {
+                    display: block;
+                    font-size: 25px;
+                }
+                .form{
+                    display: none;
+                }
+            }
+            &_list{
+                display: none;
+            }
+            &_icons{
+                display: none;
+            }
+        }
+    }
+}

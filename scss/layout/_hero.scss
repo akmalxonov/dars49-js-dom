@@ -1,0 +1,95 @@
+.hero {
+    background: linear-gradient(90.7deg, #211C24 0.64%, #211C24 101%);
+
+    &_wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &_right {
+        width: 35%;
+        transform: translateY(100%);
+        animation: slideUp 3s ease-in-out forwards;
+    }
+    @keyframes slideUp {
+        from {
+          transform: translateY(100%);
+        }
+        to {
+          transform: translateY(0);
+        }
+      }
+
+    &_left {
+        color: white;
+
+        h5 {
+            font-size: 25px;
+            font-weight: 600;
+            opacity: 40%;
+        }
+
+        h1 {
+            margin: 24px 0;
+            font-size: 96px;
+            font-weight: 100;
+            line-height: 72px;
+
+            span {
+                font-weight: 600;
+            }
+        }
+
+        p {
+            font-size: 18px;
+            font-weight: 500;
+            opacity: 40%;
+        }
+
+        .btn {
+            margin-top: 24px;
+            border: 1px solid #FFFFFF;
+            background-color: rgba(0, 0, 0, 0);
+            padding: 16px 56px 18px 56px;
+            font-size: 16px;
+            font-weight: 500;
+            color: white;
+            border-radius: 6px;
+            transition: 0.3s ease-in-out;
+
+            &:hover {
+                background-color: white;
+                color: black;
+            }
+        }
+    }
+}
+
+@include mobile() {
+    .hero {
+        padding-top: 88px;
+
+        &_wrapper {
+            flex-direction: column;
+        }
+
+        &_left {
+            text-align: center;
+
+            h1 {
+                font-size: 72px;
+                line-height: 72px;
+                margin: 16px 0;
+            }
+
+            .btn {
+                margin-top: 32px;
+            }
+        }
+
+        &_right {
+            width: 100%;
+        }
+    }
+}

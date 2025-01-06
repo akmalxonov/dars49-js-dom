@@ -1,0 +1,14 @@
+.container {
+    width: 1120px;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+}
+@include mobile() {
+    .container {
+        width: 100%;
+        padding: 0 16px;
+        min-width: 375px;
+        max-width: 571px;
+    }
+}
